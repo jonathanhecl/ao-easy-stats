@@ -8,7 +8,7 @@ Este proyecto genera un gráfico estadístico a partir de datos de texto generad
 
 _NOTA: El código de ejemplo puede necesitar modificaciones para adaptarse a la versión de AO que se esté usando._
 
-1. Incluir el módulo `[modStats.bas](https://raw.githubusercontent.com/jonathanhecl/ao-easy-stats/main/vb6-sources/modStats.bas)` en el servidor de Argentum Online.
+1. Incluir el módulo [modStats.bas](https://raw.githubusercontent.com/jonathanhecl/ao-easy-stats/main/vb6-sources/modStats.bas) en el servidor de Argentum Online.
 2. Cuando se inicia el servidor, en `General.bas Sub Main()` añadir al inicio de la función:
 ````
    Call modStats.RecordStat(modStats.EVENT_INITIALIZED, "")
