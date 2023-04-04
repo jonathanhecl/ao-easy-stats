@@ -8,11 +8,17 @@ Este proyecto genera un gráfico estadístico a partir de datos de texto generad
 
 1. Incluir el módulo `modStats.bas` en el servidor de Argentum Online.
 2. Cuando se inicia el servidor, en `General.bas Sub Main()` añadir al inicio de la función:
-> Call modStats.RecordStat(modStats.EVENT_INITIALIZED, "")
+````
+   Call modStats.RecordStat(modStats.EVENT_INITIALIZED, "")
+````
 3. Cada vez que inicia sesión un personaje, en `TCP.bas Sub ConnectUser()` añadir debajo de `.flags.UserLogged = True`:
-> Call modStats.RecordStat(modStats.EVENT_LOGIN, .Name)
+````
+    Call modStats.RecordStat(modStats.EVENT_LOGIN, .Name)
+````
 4. Cada vez que cierre sesión un personaje, en `TCP.bas Sub CloseUser()` añadir debajo de `.flags.UserLogged = False`:
-> Call modStats.RecordStat(modStats.EVENT_LOGOUT, .Name)
+````
+    Call modStats.RecordStat(modStats.EVENT_LOGOUT, .Name)
+````
 5. En algún Timer del servidor, que se ejecute cada 10~60 segundos, para verificar si ha cambiado el día, añadir:
 ````
    If lastStatDate <> Day(Date) Then
@@ -31,7 +37,9 @@ Este proyecto genera un gráfico estadístico a partir de datos de texto generad
    End If
 ````
 6. No olvidarse de añadir en el mismo lugar donde se encuentre el Timer, pero fuera de él, declarar la variable `lastStatDate`:
-> Private lastStatDate As Byte
+````
+    Private lastStatDate As Byte
+````
 
 ### ¿Cómo funciona?
 
