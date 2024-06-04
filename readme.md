@@ -56,5 +56,5 @@ _NOTA: El código de ejemplo puede necesitar modificaciones para adaptarse a la 
 2. Colocar el archivo `ao-easy-stats.exe` junto con la carpeta `stats` y ejecutar para generar `stats.html`.
 3. Abrir el archivo `stats.html` en un navegador web.
 
-### GS-Zone (c) 2023
+### GS-Zone (c) 2024
 [Debate en GS-Zone](https://www.gs-zone.org/recursos/estadisticas-para-todos-los-argentum-online.24/)
